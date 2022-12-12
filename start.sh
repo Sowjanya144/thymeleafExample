@@ -5,5 +5,5 @@
     mvn test
     mvn package
     mvn clean update
-    cd target
+    cd /home/azureuser/thymeleafExample/target
     java -jar work-0.0.1-SNAPSHOT.jar
