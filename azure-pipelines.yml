@@ -21,5 +21,6 @@ jobs:
                 cd /home/azureuser/
                 git clone "https://Sowjanya144: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@github.com/Sowjanya144/thymeleafExample.git"
                 cd /home/azureuser/thymeleafExample/
+                git pull
                 chmod 700 start.sh
                 ./start.sh
