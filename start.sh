@@ -2,7 +2,7 @@
     sudo apt-get update -y 
     sudo apt install default-jdk -y
     sudo apt install maven -y
-    cd /home/azureuser/thymeleafExample/
+    mvn update
     mvn test
     mvn package
     cd target/
