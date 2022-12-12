@@ -1,0 +1,25 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+jobs: 
+- deployment: VMDeploy
+  displayName: web
+  environment:
+    name: test
+    resourceType: VirtualMachine
+  strategy:
+      rolling:
+        maxParallel: 1 
+        deploy:
+          steps:
+          - task: Bash@3
+            inputs:
+              targetType: 'inline'
+              script: |
+                cd /home/azureuser/
+                git clone "https://Sowjanya144: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@github.com/Sowjanya144/thymeleafExample.git"
+                cd /home/azureuser/thymeleafExample/
+                chmod 700 start.sh
+                ./start.sh
