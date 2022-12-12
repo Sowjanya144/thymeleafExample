@@ -5,5 +5,5 @@
     mvn test
     mvn package
     mvn clean update
-    cd target/
+    cd target
     java -jar work-0.0.1-SNAPSHOT.jar
