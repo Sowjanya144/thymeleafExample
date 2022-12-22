@@ -1,2 +1,2 @@
 From openjdk
-cp target/
+cp target/work-0.0.1-SNAPSHOT.jar .
