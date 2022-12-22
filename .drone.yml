@@ -1,0 +1,22 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: build
+  image: ubuntu
+  commands:
+  - apt update 
+  - apt install default-jdk -y
+  - apt install maven -y
+  - mvn test
+  - mvn package
+
+- name: publish
+  image: plugins/docker
+  settings:
+    username: sowjanya135
+    password: $0wjanya135
+    repo: sowjanya135/drone-mvn
+    tags:
+    - 1.0
