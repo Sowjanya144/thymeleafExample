@@ -20,3 +20,9 @@ steps:
     repo: sowjanya135/drone-mvn
     tags:
     - 1.0
+    
+- name: deploy
+    pull: if-not-exists
+    image: sowjanya135/drone-mvn:1.0
+    commands:
+      - docker run -d -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1.0
