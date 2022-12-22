@@ -23,6 +23,6 @@ steps:
     
 - name: deploy
   #pull: if-not-exists
-  image: sowjanya135/drone-mvn:1.0
+  image: sowjanya135/drone-mvn:1
   commands:
-  - docker run -d -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1.0
+  - docker run -d -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
