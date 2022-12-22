@@ -23,8 +23,8 @@ steps:
     
 - name: deploy
   #pull: if-not-exists
-  image: docker
+  image: plugins/docker
   commands:
-  #- docker run -d -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
-  - service start docker
-  - docker-compose up 
+  - docker run -d -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
+  #- service start docker
+  #- docker-compose up 
