@@ -16,7 +16,7 @@ steps:
   image: plugins/docker
   settings:
     username: sowjanya135
-    password: $0wjanya135
+    password: D0cker@135
     repo: sowjanya135/drone-mvn
     tags:
     - 1.0
