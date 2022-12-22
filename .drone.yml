@@ -26,6 +26,5 @@ steps:
   image: docker
   commands:
   #- docker run -d -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
-  - systemctl start docker
-  - systemctl enable docker
+  - service start docker
   - docker-compose up 
