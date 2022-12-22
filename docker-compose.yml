@@ -1,0 +1,8 @@
+version: '3'
+services:
+  nodejs:
+    container_name: drone-mvn
+    image: sowjanya135/drone-mvn:1
+    restart: unless-stopped
+    ports:
+      - "8086:8086"
