@@ -27,9 +27,9 @@ steps:
   commands:
   - apt-get update
   - apt install sudo -y
-  - sudo su
+  - sudo -i
   - apt install docker.io -y
-  #- dockerd
+  - dockerd
   #- useradd sowjanya144
   #- chown $USER:sowjanya144 /var/run/docker.sock
   - docker run -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
