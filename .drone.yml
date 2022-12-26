@@ -23,13 +23,13 @@ steps:
     
 - name: deploy
   #pull: if-not-exists
-  image: ubuntu
+  image: plugins/docker
   privileged: true
   commands:
-  - apt-get update
+  #- apt-get update
   #- apt install sudo -y
   #- sudo -i
-  - apt install docker.io -y
+  #- apt install docker.io -y
   #- dockerd
   #- useradd sowjanya144
   #- chown $USER:sowjanya144 /var/run/docker.sock
