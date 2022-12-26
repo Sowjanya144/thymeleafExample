@@ -37,5 +37,5 @@ steps:
   #- sudo docker run -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
   #- service start docker
   #- docker-compose up -d
-  - sudo chmod 757 /var/run/docker.sock
+  - chmod 757 /var/run/docker.sock
   - docker run --privileged=true -v /var/run/docker.sock:/var/run/docker.sock -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
