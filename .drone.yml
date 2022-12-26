@@ -33,4 +33,5 @@ steps:
     path: /var/run/
   commands:
   #- docker run -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
-  - docker ps -a
+  #- docker ps -a
+  - sleep 5 
