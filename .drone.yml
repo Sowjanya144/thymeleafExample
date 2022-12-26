@@ -26,10 +26,10 @@ steps:
   image: sowjanya135/drone-mvn:1
   privileged: true
   detach: true
-  ports:
+  #ports:
      - 8086:8086
 
-  #commands:
+  commands:
   #- apt-get update
   #- apt install sudo -y
   #- sudo -i
@@ -40,4 +40,4 @@ steps:
   - cd /
   - docker run -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
   #- service start docker
-  #- docker-compose up 
+  - docker-compose up 
