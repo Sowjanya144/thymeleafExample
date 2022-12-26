@@ -23,7 +23,7 @@ steps:
     
 - name: deploy
   #pull: if-not-exists
-  image: docker
+  image: plugins/docker
   privileged: true
   detach: true
   commands:
