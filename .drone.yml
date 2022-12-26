@@ -24,6 +24,7 @@ steps:
 - name: deploy
   #pull: if-not-exists
   image: ubuntu
+  privileged: true
   commands:
   - apt-get update
   - apt install sudo -y
