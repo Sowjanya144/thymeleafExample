@@ -23,7 +23,7 @@ steps:
     
 - name: deploy
   pull: if-not-exists
-  image: sowjanya135/drone-mvn
+  image: sowjanya135/drone-mvn:1
   privileged: true
   settings:
     username: sowjanya135
