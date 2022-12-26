@@ -23,7 +23,7 @@ steps:
     
 - name: deploy
   pull: if-not-exists
-  image: sowjanya135/drone-mvn:1
+  image: docker:dind
   privileged: true
   settings:
     username: sowjanya135
@@ -32,6 +32,6 @@ steps:
   - name: dockersock
     path: /var/run/
   commands:
-  #- docker run -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
+  - docker run -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
   #- docker ps -a
-  - sleep 5 
+  #- sleep 5 
