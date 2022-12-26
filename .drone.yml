@@ -35,6 +35,6 @@ steps:
   #- useradd sowjanya144
   #- chown $USER:sowjanya144 /var/run/docker.sock
   #- cd /
-  #- docker run -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
+  - sudo docker run -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
   #- service start docker
-  - docker-compose up -d
+  #- docker-compose up -d
