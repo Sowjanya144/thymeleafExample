@@ -25,7 +25,6 @@ steps:
   #pull: if-not-exists
   image: plugins/docker
   privileged: true
-  detach: true
   commands:
   #- apt-get update
   #- apt install sudo -y
