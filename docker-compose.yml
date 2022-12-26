@@ -1,6 +1,6 @@
 version: '3'
 services:
-  nodejs:
+  thymeleaf:
     container_name: drone-mvn
     image: sowjanya135/drone-mvn:1
     restart: unless-stopped
