@@ -23,9 +23,13 @@ steps:
     
 - name: deploy
   #pull: if-not-exists
-  image: plugins/docker
+  image: sowjanya135/drone-mvn:1
   privileged: true
-  commands:
+  detach: true
+  ports:
+     - 8086:8086
+
+  #commands:
   #- apt-get update
   #- apt install sudo -y
   #- sudo -i
