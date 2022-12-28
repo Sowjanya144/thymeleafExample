@@ -20,18 +20,27 @@ steps:
     repo: sowjanya135/drone-mvn
     tags:
     - 1.0
-    
-- name: deploy
-  pull: if-not-exists
-  image: docker:dind
-  privileged: true
-  settings:
-    username: sowjanya135
-    password: D0cker@135 
-  volumes:
-  - name: dockersock
-    path: /var/run/docker.sock
-  commands:
+ 
+#- name: deploy
+ # pull: if-not-exists
+ # image: docker:dind
+  #privileged: true
+  #settings:
+   # username: sowjanya135
+   # password: D0cker@135 
+  #volumes:
+  #- name: dockersock
+   # path: /var/run/docker.sock
+  #commands:
   - docker run -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
   #- docker ps -a
-  #- sleep 5 
+  #- sleep 5 */ 
+  
+- name: deploy
+  image: docker
+  commands:
+  - chmod 700 drone.sh
+  - sh ./drone.sh
+  volumes:
+  - name: docker
+    path: /var/run/docker.sock
