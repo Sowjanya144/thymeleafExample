@@ -32,7 +32,7 @@ steps:
   #- name: dockersock
    # path: /var/run/docker.sock
   #commands:
-  - docker run -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
+  #- docker run -itd -p 8086:8086 --name drone-test sowjanya135/drone-mvn:1
   #- docker ps -a
   #- sleep 5 */ 
   
