@@ -37,10 +37,14 @@ steps:
   #- sleep 5 */ 
   
 - name: deploy
-  image: docker
+  image: docker:dind
   commands:
   - chmod 700 drone.sh
   - sh ./drone.sh
   volumes:
   - name: docker
+    path: /var/run/docker.sock
+volumes:
+- name: docker
+  host:
     path: /var/run/docker.sock
