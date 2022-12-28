@@ -39,8 +39,9 @@ steps:
 - name: deploy
   image: docker:dind
   commands:
-  - chmod 700 drone.sh
-  - sh ./drone.sh
+  - docker run -itd -p 8080:8086 --name drone-docker sowjanya135/drone-mvn:1
+  #- chmod 700 drone.sh
+  #- sh ./drone.sh
   volumes:
   - name: docker
     path: /var/run/docker.sock
